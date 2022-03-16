@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter_app/app_button.dart';
 import 'package:my_first_flutter_app/app_textField.dart';
+import 'package:my_first_flutter_app/screens/home.dart';
 import 'package:my_first_flutter_app/screens/signup.dart';
 class SignIn extends StatelessWidget{
   @override
@@ -47,10 +48,18 @@ class SignIn extends StatelessWidget{
                     ],),
               ),
               const SizedBox(height: 10),
-              AppButton(label:"Sign In", onPress:onSignPress),
-            ],
+            GestureDetector(
+              onTap: (){
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_)=>Home())
+                );
+              },
+
+              child: AppButton(label:"Sign In", onPress:onSignPress),
+            ),],
           ),
         ));
   }
   void onSignPress(){}
+
 }
