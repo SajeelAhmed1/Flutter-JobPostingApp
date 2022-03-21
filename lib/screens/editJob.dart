@@ -3,6 +3,7 @@ import 'package:my_first_flutter_app/app_button.dart';
 import 'package:my_first_flutter_app/app_textField.dart';
 import 'package:my_first_flutter_app/iconfield.dart';
 import 'package:my_first_flutter_app/jobCard.dart';
+import 'package:my_first_flutter_app/paraField.dart';
 import 'package:my_first_flutter_app/screens/home.dart';
 
 import 'package:my_first_flutter_app/screens/signin.dart';
@@ -48,7 +49,8 @@ class editJob extends StatelessWidget {
                     ),
                     ],
                 ),
-                appTextField(placeholder: "ff")
+                appTextField(placeholder: "Enter Job"),
+                paraTextField(placeholder:"Enter Paragraph"),
 
 
 
