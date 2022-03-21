@@ -18,16 +18,17 @@ class paraTextField  extends StatelessWidget {
                 color: const Color(0xff5D5D67),
                 width:1
             ) ),
-        child:  TextField(
-          style: const TextStyle(color: Colors.white, fontSize: 15),
-          decoration: InputDecoration(
-            hintText: placeholder ,
-            hintStyle: const TextStyle(color: Color(0xFF8F8F9E), fontSize:15),
-            border: InputBorder.none,
-            // prefixIcon: Icon(Icons.search),
-          ),
-        )
-    );
+
+      child:TextField(
+        style: const TextStyle(color: Colors.white, fontSize: 15),
+        decoration: InputDecoration(
+        hintText: placeholder ,
+        hintStyle: const TextStyle(color: Color(0xFF8F8F9E), fontSize:15),
+        border: InputBorder.none,),
+        keyboardType: TextInputType.multiline,
+        maxLines: null,
+
+      ));
 
   }
 }

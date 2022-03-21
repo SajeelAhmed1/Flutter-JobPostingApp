@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-class appTextField  extends StatelessWidget {
+class textFilledField  extends StatelessWidget {
   // const ({Key? key}) : super(key: key);
-  final String placeholder;
-
-  const appTextField({required this.placeholder});
+  // final String placeholder;
+  //
+  // const textFilledField ({required this.placeholder});
 
   @override
   Widget build(BuildContext context) {
@@ -18,12 +18,11 @@ class appTextField  extends StatelessWidget {
                 width:1
             ) ),
         child:  TextField(
-
+          controller: TextEditingController(text: "Flutter Developer"),
           style: const TextStyle(color: Colors.white, fontSize: 15),
           decoration: InputDecoration(
-              hintText: placeholder ,
-              hintStyle: const TextStyle(color: Color(0xFF8F8F9E), fontSize:15),
-              border: InputBorder.none,
+            hintStyle: const TextStyle(color: Color(0xFF8F8F9E), fontSize:15),
+            border: InputBorder.none,
             // prefixIcon: Icon(Icons.search),
           ),
         )

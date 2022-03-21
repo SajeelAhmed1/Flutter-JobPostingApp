@@ -3,7 +3,7 @@ import 'package:my_first_flutter_app/app_button.dart';
 import 'package:my_first_flutter_app/app_textField.dart';
 import 'package:my_first_flutter_app/iconfield.dart';
 import 'package:my_first_flutter_app/jobCard.dart';
-
+import 'package:my_first_flutter_app/screens/newJob.dart';
 import 'package:my_first_flutter_app/screens/signin.dart';
 
 class Home extends StatelessWidget {
@@ -65,6 +65,19 @@ class Home extends StatelessWidget {
 
 
             )
+        ,floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.white,
+        child: const Icon(Icons.add),
+        foregroundColor: Colors.black,
+        heroTag: 'uniqueTag',
+        onPressed: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => newJob()
+              ));
+        }
+    ),
     );
   }
 }

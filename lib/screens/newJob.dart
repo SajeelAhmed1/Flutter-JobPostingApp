@@ -12,8 +12,8 @@ import 'package:my_first_flutter_app/screens/home.dart';
 
 import 'package:my_first_flutter_app/screens/signin.dart';
 
-class editJob extends StatelessWidget {
-  const editJob({Key? key}) : super(key: key);
+class newJob extends StatelessWidget {
+  const newJob({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,33 +30,33 @@ class editJob extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     GestureDetector(
-                        onTap: (){
-                          Navigator.of(context).push(
-                              MaterialPageRoute(builder: (_)=>Home())
-                          );
-                        },
+                      onTap: (){
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (_)=>Home())
+                        );
+                      },
 
-                        child: Image.asset('assets/images/leftArrow.png', height: 30),
+                      child: Image.asset('assets/images/leftArrow.png', height: 30),
 
                     ),
-                     const SizedBox(width: 30),
+                    const SizedBox(width: 30),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
 
 
-                        Text("Edit Job",
+                        Text("Add New Job",
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 28, fontWeight: FontWeight.bold)),
                       ],
                     ),
-                    ],
+                  ],
                 ),
-                textFilledField(),
-                paraFilledField(),
-                Spacer(),
-                AppButton(label:"Update Job", onPress:onSignPress)
+                const appTextField(placeholder: "Enter Position Name"),
+                const paraTextField(placeholder: "Describe Requirement"),
+                 const Spacer(),
+                 AppButton(label:"Submit Job", onPress:onSignPress)
 
 
 
