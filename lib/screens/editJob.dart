@@ -3,10 +3,13 @@ import 'package:my_first_flutter_app/app_button.dart';
 import 'package:my_first_flutter_app/app_textField.dart';
 import 'package:my_first_flutter_app/iconfield.dart';
 import 'package:my_first_flutter_app/jobCard.dart';
+import 'package:my_first_flutter_app/screens/home.dart';
 
 import 'package:my_first_flutter_app/screens/signin.dart';
 
 class editJob extends StatelessWidget {
+  const editJob({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,22 +24,31 @@ class editJob extends StatelessWidget {
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                     Image.asset('assets/images/leftArrow.png', height: 30),
+                    GestureDetector(
+                        onTap: (){
+                          Navigator.of(context).push(
+                              MaterialPageRoute(builder: (_)=>Home())
+                          );
+                        },
+
+                        child: Image.asset('assets/images/leftArrow.png', height: 30),
+
+                    ),
+                     const SizedBox(width: 30),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
 
-                        Text("Add New Job",
+
+                        Text("Edit Job",
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 30, fontWeight: FontWeight.bold)),
+                                fontSize: 28, fontWeight: FontWeight.bold)),
                       ],
                     ),
-                    const Spacer(),
-
-
-                  ],
+                    ],
                 ),
+                appTextField(placeholder: "ff")
 
 
 
