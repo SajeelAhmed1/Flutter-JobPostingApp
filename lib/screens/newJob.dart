@@ -43,8 +43,6 @@ class newJob extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
-
-
                         Text("Add New Job",
                             style: TextStyle(
                                 color: Colors.white,
